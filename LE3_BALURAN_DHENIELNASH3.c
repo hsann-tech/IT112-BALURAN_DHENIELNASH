@@ -6,7 +6,10 @@ int main() {
     int num1, num2;
 
     printf("Enter Complete Name: %s\n", name);
+    fgets(name, sizeof(name), stdin);
+
     printf("Enter Section: %s\n", section);
+    fgets(section, sizeof(section), stdin);
 
     printf("Enter first number: ");
     scanf("%d", &num1);
