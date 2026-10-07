@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background: linear-gradient(90deg, #1c04f8, #4b6cff);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    box-shadow: 0 3px 10px #aaa;
+}
+
+header h2 {
+    color: white;
+    margin: 0;
+    font-size: 25px;
+}
+
+/* Navigation */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+
+main {
+    padding: 60px 10%;
+}
+
+/* Page Introduction */
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-intro > p:first-child {
+    color: #1c04f8;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.page-intro h1 {
+    font-size: 45px;
+    color: #1c04f8;
+    margin: 15px 0;
+}
+
+.description {
+    font-size: 17px;
+    color: #555;
+}
+
+/* Project Cards */
+
+.project-card {
+    position: relative;
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border-left: 6px solid #1c04f8;
+    box-shadow: 0 4px 12px #ddd;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px #ccc;
+}
+
+/* Project Number */
+
+.project-number {
+    color: #1c04f8;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Project Titles */
+
+.project-card h2 {
+    color: #1c04f8;
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+
+/* Project Information */
+
+.project-info {
+    background-color: #f4f7fb;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.project-info strong {
+    color: #1c04f8;
+}
+
+/* IT111 Learning */
+
+.learning {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 6px solid #1c04f8;
+    box-shadow: 0 4px 12px #ddd;
+    margin-top: 50px;
+}
+
+.label {
+    color: #1c04f8;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.learning h2 {
+    color: #1c04f8;
+    font-size: 30px;
+}
+
+.lesson {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.lesson:last-child {
+    border-bottom: none;
+}
+
+.lesson h3 {
+    color: #333;
+}
+
+.lesson p {
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1c04f8;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
