@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LEN 256
+
+int main() {
+    FILE *fp;
+    char note[MAX_LEN];
+    char line[MAX_LEN];
+    int n, i, count;
+
+    /* ---------- PART 1: WRITE MODE ("w") ---------- */
+    fp = fopen("notes.txt", "w");
+    if (fp == NULL) {
+        printf("Error: Could not open notes.txt for writing.\n");
+        return 1;
+    }
+
+    printf("Writing Notes File:\n");
+    printf("How many notes do you want to record? ");
+    scanf("%d", &n);
+    getchar();  /* consume leftover newline so fgets works properly */
+
+    printf("\n");
+    for (i = 1; i <= n; i++) {
+        printf("Note %d: ", i);
+        fgets(note, MAX_LEN, stdin);   /* fgets allows spaces */
+
+        /* make sure each note ends with a newline */
+        if (strchr(note, '\n') == NULL) {
+            strcat(note, "\n");
+        }
+        fputs(note, fp);               /* one note per line */
+    }
+
+    fclose(fp);
+    printf("\nInitial notes saved successfully.\n");
+
+    /* ---------- PART 2: APPEND MODE ("a") ---------- */
+    fp = fopen("notes.txt", "a");
+    if (fp == NULL) {
+        printf("Error: Could not open notes.txt for appending.\n");
+        return 1;
+    }
+
+    printf("\nEnter one additional note:\n");
+    fgets(note, MAX_LEN, stdin);
+
+    if (strchr(note, '\n') == NULL) {
+        strcat(note, "\n");
+    }
+    fputs(note, fp);
+
+    fclose(fp);
+    printf("\nNew note added successfully.\n");
+
+    /* ---------- PART 3: READ MODE ("r") ---------- */
+    fp = fopen("notes.txt", "r");
+    if (fp == NULL) {
+        printf("Error: Could not open notes.txt for reading.\n");
+        return 1;
+    }
+
+    printf("\nReading Saved Notes:\n\n");
+    count = 1;
+    while (fgets(line, MAX_LEN, fp) != NULL) {
+        printf("%d. %s", count, line);   /* line already has '\n' */
+        count++;
+    }
+
+    fclose(fp);
+    return 0;
+}
